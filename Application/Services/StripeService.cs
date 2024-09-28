@@ -16,7 +16,6 @@ namespace Application.Services
                 {
                   new SessionLineItemOptions
                   {
-                    // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
                     Price = "price_1Q0cWcRsXPDOTlRNlPYfDZG4",
                     Quantity = 1,
                   },
