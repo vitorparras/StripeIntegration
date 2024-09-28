@@ -14,15 +14,16 @@ namespace Application.Services
             {
                 LineItems = new List<SessionLineItemOptions>
                 {
-                    new SessionLineItemOptions
-                    {
-                        Price = "price_1Q0cWcRsXPDOTlRNlPYfDZG4",
-                        Quantity = 1,
-                    },
+                  new SessionLineItemOptions
+                  {
+                    // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
+                    Price = "price_1Q0cWcRsXPDOTlRNlPYfDZG4",
+                    Quantity = 1,
+                  },
                 },
                 Mode = "payment",
-                SuccessUrl = domain + "/return.html?session_id={CHECKOUT_SESSION_ID}",
-                CancelUrl = domain + "/return.html?session_id={CHECKOUT_SESSION_ID}",
+                SuccessUrl = domain + "/success.html",
+                CancelUrl = domain + "/cancel.html",
             };
 
             var service = new SessionService();
@@ -30,7 +31,7 @@ namespace Application.Services
 
             return new GenericResponse<ResponseCreate>(new ResponseCreate()
             {
-                ClientSecret = session.ClientSecret
+                Url = session.Url
             });
         }
 

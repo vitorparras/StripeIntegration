@@ -4,7 +4,7 @@ namespace Domain.Stripe
 {
     public class ResponseCreate
     {
-        public object ClientSecret { get; set; }
+        public string Url { get; set; }
 
     }
 }
