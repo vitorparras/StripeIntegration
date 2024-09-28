@@ -23,7 +23,6 @@ namespace Application.Services
                 Mode = "payment",
                 SuccessUrl = domain + "/return.html?session_id={CHECKOUT_SESSION_ID}",
                 CancelUrl = domain + "/return.html?session_id={CHECKOUT_SESSION_ID}",
-                ReturnUrl = domain + "/return.html?session_id={CHECKOUT_SESSION_ID}",
             };
 
             var service = new SessionService();
