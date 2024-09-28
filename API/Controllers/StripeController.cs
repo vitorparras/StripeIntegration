@@ -11,7 +11,7 @@ namespace API.Controllers
         private readonly IStripeService stripeService = stripeService ?? throw new ArgumentNullException(nameof(stripeService));
 
         [HttpPost("Create")]
-        [SwaggerOperation(summary: "Criaçao")]
+        [SwaggerOperation(summary: "Criacao")]
         public async Task<ActionResult> Get()
         {
             try

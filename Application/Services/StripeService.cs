@@ -9,7 +9,7 @@ namespace Application.Services
     {
         public async Task<GenericResponse<ResponseCreate>> Create()
         {
-            var domain = "http://localhost:4242";
+            var domain = "http://localhost:4000";
             var options = new SessionCreateOptions
             {
                 UiMode = "embedded",
@@ -19,15 +19,17 @@ namespace Application.Services
                     {
                         Price = "price_1Q0cWcRsXPDOTlRNlPYfDZG4",
                         Quantity = 1,
-                    }
+                    },
                 },
                 Mode = "payment",
+                SuccessUrl = domain + "/return.html?session_id={CHECKOUT_SESSION_ID}",
+                CancelUrl = domain + "/return.html?session_id={CHECKOUT_SESSION_ID}",
                 ReturnUrl = domain + "/return.html?session_id={CHECKOUT_SESSION_ID}",
             };
 
             var service = new SessionService();
             Session session = service.Create(options);
-            
+
             return new GenericResponse<ResponseCreate>(new ResponseCreate()
             {
                 ClientSecret = session.ClientSecret
