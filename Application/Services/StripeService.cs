@@ -12,7 +12,6 @@ namespace Application.Services
             var domain = "http://localhost:4000";
             var options = new SessionCreateOptions
             {
-                UiMode = "embedded",
                 LineItems = new List<SessionLineItemOptions>
                 {
                     new SessionLineItemOptions
