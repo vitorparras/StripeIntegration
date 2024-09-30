@@ -21,8 +21,8 @@ namespace Application.Services
                   },
                 },
                 Mode = "payment",
-                SuccessUrl = domain + "/success.html",
-                CancelUrl = domain + "/cancel.html",
+                SuccessUrl = domain + "/sys/stripe/success",
+                CancelUrl = domain + "/sys/stripe/cancel",
             };
 
             var service = new SessionService();

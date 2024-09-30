@@ -364,3 +364,4 @@ FodyWeavers.xsd
 /API/Properties/ServiceDependencies/Api-Stripe-Integration/apis1.arm.json
 /API/Properties/serviceDependencies.Api-Stripe-Integration.json
 /API/Properties/serviceDependencies.json
+/API/Properties/launchSettings.json
