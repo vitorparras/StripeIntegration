@@ -21,7 +21,7 @@ namespace Application.Services
                   },
                 },
                 Mode = "payment",
-                SuccessUrl = domain + "/sys/stripe/success",
+                SuccessUrl = domain + "/sys/stripe/success?TESTE={CHECKOUT_SESSION_ID}",
                 CancelUrl = domain + "/sys/stripe/cancel",
             };
 
